@@ -1,12 +1,10 @@
-/* *
- * This file contains input components.
+/* This file contains input components. */
 
- * Instructions: 
- *   - Add number input
- *   - Add date input
- *   - Add multine input
- *   - Do any necessary refactoring
- * */
+// Instructions: 
+//   - Add number input
+//   - Add date input
+//   - Add multine input
+//   - Do any necessary refactoring
 
 import { Field } from "react-final-form";
 import "./Input.css";
