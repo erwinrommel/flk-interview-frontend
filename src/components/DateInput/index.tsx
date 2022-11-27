@@ -2,13 +2,14 @@ import React from "react";
 import { FieldRenderProps } from "react-final-form";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "./DateInput.css"
-import { isValid } from 'date-fns'
+import "./DateInput.css";
+import { isValid } from "date-fns";
 
 type Props = FieldRenderProps<string, any>;
 
 const DateInput: React.FC<Props> = ({ name, input: { value, onChange } }) => {
-    return (
+  return (
+    <div>
       <DatePicker
         dateFormat="dd-MM-yyyy"
         selected={value && isValid(value) ? new Date(value) : undefined}
@@ -22,7 +23,8 @@ const DateInput: React.FC<Props> = ({ name, input: { value, onChange } }) => {
           }
         }}
       />
-    );
-  };
+    </div>
+  );
+};
 
 export { DateInput };

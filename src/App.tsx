@@ -6,29 +6,33 @@
 //   3. Create an identical form with controlled state
 
 import { Form, Field } from "react-final-form";
-import { InputField, DateInput, MultiLineInput, NumberInput, TextInput } from './components'
+import {
+  InputField,
+  DateInput,
+  MultiLineInput,
+  NumberInput,
+  TextInput,
+} from "./components";
 import "./App.css";
 
 function App() {
   return (
-    <Form onSubmit={values => window.alert(JSON.stringify(values))}>
+    <Form onSubmit={(values) => window.alert(JSON.stringify(values))}>
       {({ handleSubmit }) => (
         <form onSubmit={handleSubmit} className="form">
           <InputField label="Text field">
-            <Field name="textField" component={TextInput}/>
+            <Field name="textField" component={TextInput} />
           </InputField>
           <InputField label="Number field">
-            <Field name="numberField" component={NumberInput}/>
-            </InputField>
+            <Field name="numberField" component={NumberInput} />
+          </InputField>
           <InputField label="Date field">
-            <Field name="dateField" component={DateInput}/>
+            <Field name="dateField" component={DateInput} />
           </InputField>
           <InputField label="MultiLine field">
             <Field
               name="multiLineField"
-              render={(props) => (
-                <MultiLineInput {...props} rows={5}/>
-              )}
+              render={(props) => <MultiLineInput {...props} rows={5} />}
             />
           </InputField>
           <button type="submit">Submit</button>
